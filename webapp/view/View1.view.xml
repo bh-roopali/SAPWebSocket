@@ -1,0 +1,41 @@
+<mvc:View controllerName="com.incture.SAPWebSocket.SAPWebSocket.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+				<!--	<Input value="{oModel>/msg}"></Input>-->
+					<Button text="Connect" icon="sap-icon://accept" iconFirst="false" press="onConnect"></Button>
+					<HBox id="idShowMsgHBX">
+					<!--<Text text="Total: "></Text>
+					<Text text="{oModel>SerialNo}"></Text>-->
+					</HBox>
+						<Table id="idProductsTable"
+		inset="false"
+		items="{oModel>/allocationDto}">
+		<columns>
+				<Column
+				width="1em">
+				<Text text="No." />
+			</Column>
+			<Column
+				width="12em">
+				<Text text="Messages" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+							<Text
+						text="{oModel>SerialNo}" />
+					<Text
+						text="{oModel>ItemNo}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

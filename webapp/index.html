@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>SAPWebSocket</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"com.incture.SAPWebSocket.SAPWebSocket": "./"}'>
+		</script>
+
+	<!--	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+	src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.2.0/sockjs.js"></script>
+     <script
+	src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.js"></script>-->
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "com.incture.SAPWebSocket.SAPWebSocket"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
